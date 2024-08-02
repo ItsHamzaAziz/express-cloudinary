@@ -34,11 +34,7 @@ app.post('/upload', upload.single('image'), async (req, res) => {
         })
    
         
-        res.json({
-            message: 'Image uploaded successfully',
-            result,
-            file
-        })
+        res.json({message: 'Image uploaded to Cloudinary'})
     } catch (error) {
         res.status(400).json({ error: error.message })
     }
